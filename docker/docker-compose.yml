@@ -29,7 +29,7 @@ services:
       dockerfile: Dockerfile
     environment:
       APPLICATION_URL: ${APPLICATION_URL:-http://localhost:5000}
-      CONFIG_ROOT: ../config
+      CONFIG_ROOT: ../config/default
       ENVIRONMENT: ${ENVIRONMENT:-default}
       ENABLE_GUNICORN: ${ENABLE_GUNICORN:-0}
       INDY_LEDGER_URL: ${LEDGER_URL:-http://localhost:9000}
@@ -49,8 +49,6 @@ services:
       WALLET_SEED_VONX: ${WALLET_SEED_VONX:-}
       ISSUER_WALLET_DID: ${ISSUER_WALLET_DID}
       HTTP_FORCE_CLOSE_CONNECTIONS: "true"
-    external_links:
-       - tob_tob-api_1:tob-api
     networks:
       - orgbook
       - myorg
