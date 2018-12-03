@@ -1,0 +1,21 @@
+#This is an example of a credential schema that describes the fields that will included into the credentials issued by the Agent.
+
+- name: myorg-credential.my-organization.ca
+  version: '1.0.5'
+  attributes:
+    registration_id:
+      description: Unique identifer assigned to entity by registrar (requires an existing registration credential)
+      required: Y
+    credential_status:
+      description: Status of the credential (ACTive or HIStorical)
+      required: Y
+    credential_status_effective:
+      description: Date status became/becomes effective (e.g. can be future dated)
+      required: Y
+    credential_status_expiry:
+      description: Date status will expire
+      required: N
+    effective_date:
+      description: Date Credential is effective (typically same as date credential is issued)
+      required: Y
+
